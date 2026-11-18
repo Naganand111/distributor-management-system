@@ -1,0 +1,164 @@
+/* ===== GLOBAL — Legacy base reset (uses design-system tokens) ===== */
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+
+/* ===== HEADER ===== */
+
+.top-header {
+  height: var(--header-h, 60px);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.top-header h5 {
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+
+
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+  width: 210px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.sidebar .nav-link {
+  color: var(--text-secondary);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  margin: 2px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sidebar .nav-link:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.sidebar .nav-link.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+.main-content {
+  padding: 30px;
+}
+
+
+/* ===== CARDS ===== */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--text);
+}
+
+
+/* ===== DASHBOARD CARDS ===== */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 25px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+
+/* ===== BUTTONS ===== */
+
+.btn-primary {
+  background: var(--brand);
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--brand-strong);
+}
+
+
+/* ===== TABLES ===== */
+
+.table {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.table thead {
+  background: var(--brand);
+  color: #fff;
+}
+
+
+/* ===== FORMS ===== */
+
+.form-control {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: var(--ring);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 12px;
+  text-align: center;
+  color: var(--text-muted);
+}
